@@ -1,0 +1,88 @@
+# Roadmap - Browser Extension for Grade Sheet Editing
+
+## Project Overview
+This project is a browser extension for students at BRAC University to upload, edit, and analyze their grades directly on the grade sheet webpage. The extension provides a user-friendly interface to modify grades, add semesters, and dynamically calculate CGPA changes.
+
+## Phases
+
+### Phase 1: Project Setup and Initial Structure
+1. **Create Extension Structure**
+   - Set up the initial directory structure:
+     - `manifest.json`: Metadata and permissions for the extension.
+     - `content.js`: Injects JavaScript code into the webpage.
+     - `popup.html`: The popup UI for the extension.
+     - `popup.js`: JavaScript to handle events within the popup interface.
+
+2. **Configure Manifest File**
+   - Define necessary permissions in `manifest.json` to allow access to the BRAC University grade sheet page.
+   - Set up the extension icon and popup settings.
+
+### Phase 2: PDF Upload and Parsing
+1. **Build PDF Upload Interface**
+   - Add an upload button in `popup.html` to enable students to select and upload their gradesheet PDF.
+
+2. **Implement PDF Parsing**
+   - Use a library (e.g., `pdf.js`) in `popup.js` to parse the uploaded PDF, extracting course data, grades, credits, and other relevant information.
+   - Store parsed data in JSON format for easy manipulation.
+
+### Phase 3: Data Injection and Editable Grade Display
+1. **Inject Grades onto Web Page**
+   - Use `content.js` to insert the parsed gradesheet data directly into the BRAC University grade sheet webpage.
+   - Identify the HTML elements where course details, credits, and CGPA are displayed and replace them with editable input fields.
+
+2. **Enable Grade Editing**
+   - Make fields editable so students can modify grades, credits, and course titles within the webpage.
+   - Use JavaScript to track changes and update the data in real time.
+
+### Phase 4: Real-Time CGPA Calculation
+1. **Implement CGPA Calculation Logic**
+   - Develop a function in `content.js` to calculate CGPA based on the modified grades and credits.
+   - Display the updated CGPA on the page dynamically as the student edits grades.
+
+2. **Add Semester and Course Features**
+   - Provide options for adding new semesters and courses with input fields.
+   - Ensure new data integrates seamlessly with the CGPA calculation.
+
+### Phase 5: Advanced Features - "What-If" Analysis
+1. **Create "What-If" CGPA Simulation**
+   - Implement a feature to allow hypothetical grade changes to see potential CGPA outcomes.
+   - Enable options for students to save or reset their simulations.
+
+2. **Add Target CGPA Guidance**
+   - Allow students to set a target CGPA and suggest the grades needed in future courses to achieve this goal.
+
+### Phase 6: Testing and Optimization
+1. **Test on Different Browsers**
+   - Conduct compatibility tests on Chrome and Firefox.
+   - Verify accurate data extraction, injection, and CGPA calculations.
+
+2. **Optimize for Performance**
+   - Improve real-time responsiveness and minimize load on the page.
+   - Optimize code for smooth interactions.
+
+### Phase 7: Deployment and User Guide
+1. **Publish the Extension**
+   - Deploy the extension to the Chrome Web Store and Mozilla Add-ons for easy access by BRAC University students.
+
+2. **Provide a User Guide**
+   - Create a guide explaining how to use the extension to upload, edit, and simulate grades, including screenshots and FAQs.
+
+---
+
+## Technical Requirements
+
+- **Technologies**: JavaScript, HTML, CSS, pdf.js (for PDF parsing).
+- **Permissions**:
+  - `activeTab`: To access the university grade sheet page.
+  - `storage`: To save temporary grade data for each student session.
+- **Target Browsers**: Chrome and Firefox.
+
+## Project Timeline
+
+- **Phase 1-3**: 2-3 weeks
+- **Phase 4-5**: 2 weeks
+- **Phase 6-7**: 1 week
+
+---
+
+This roadmap outlines a clear development path for creating a browser extension that enhances the BRAC University grade sheet page by adding upload, edit, and simulation features for students.

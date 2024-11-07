@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "BRACU Grade Calculator",
+  "version": "1.0",
+  "description": "Edit grades and calculate CGPA changes",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "content_scripts": [{
+    "matches": ["*://*.bracu.ac.bd/academia/*"],
+    "js": [
+      "calculator.js",
+      "editor.js",
+      "semesterManager.js",
+      "content.js"
+    ],
+    "css": ["styles.css"],
+    "run_at": "document_end"
+  }],
+  "web_accessible_resources": [{
+    "resources": ["editor.html", "editor.css"],
+    "matches": ["*://*.bracu.ac.bd/*"]
+  }],
+  "action": {
+    "default_popup": "popup.html"
+  }
+} 

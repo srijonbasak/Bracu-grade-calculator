@@ -1,0 +1,312 @@
+/* Base styles */
+#grade-editor-container {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #705C53;
+    line-height: 1.5;
+    background: #F5F5F7;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    max-width: 1200px;
+    height: 95vh;
+    z-index: 10000;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(112, 92, 83, 0.2);
+    overflow: auto;
+    padding: 20px;
+}
+
+/* Header styles */
+.header {
+    background: #EDDFE0;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+
+.student-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.student-name {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #705C53;
+}
+
+.student-program {
+    font-size: 1.2rem;
+    color: #705C53;
+    text-align: center;
+    max-width: 80%;
+    line-height: 1.4;
+}
+
+.student-id {
+    font-size: 1.1rem;
+    color: #705C53;
+    margin-top: 0.2rem;
+}
+
+.info-details {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.info-item {
+    background: #705C53;
+    color: #F5F5F7;
+    padding: 0.8rem 1.2rem;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 1rem;
+    white-space: nowrap;
+}
+
+/* Semester styles */
+.semester {
+    background: #EDDFE0;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.semester-header {
+    background: #705C53;
+    color: #F5F5F7;
+    padding: 1.2rem 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Table styles */
+.grade-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #F5F5F7;
+}
+
+.grade-table th {
+    background: #705C53;
+    color: #F5F5F7;
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.grade-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #B7B7B7;
+    color: #705C53;
+}
+
+/* Grade select styles */
+.grade-select {
+    padding: 8px;
+    border: 1px solid #B7B7B7;
+    border-radius: 4px;
+    width: 70px;
+    background: #F5F5F7;
+    color: #705C53;
+    text-align: center;
+    cursor: pointer;
+}
+
+.grade-select:hover {
+    border-color: #705C53;
+}
+
+.grade-select option {
+    background: #F5F5F7;
+    color: #705C53;
+}
+
+/* Button styles */
+.add-semester-btn {
+    background: #705C53;
+    color: #F5F5F7;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.add-semester-btn:hover {
+    background: #B7B7B7;
+}
+
+.delete-course-btn {
+    background: #705C53;
+    color: #F5F5F7;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.delete-course-btn:hover {
+    background: #B7B7B7;
+}
+
+/* Summary section */
+.stats-container {
+    background: #EDDFE0;
+    padding: 15px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.stat-item {
+    background: #705C53;
+    color: #F5F5F7;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+/* Add Course button */
+.add-course-btn {
+    background: #705C53;
+    color: #F5F5F7;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-left: 10px;
+}
+
+.add-course-btn:hover {
+    background: #B7B7B7;
+}
+
+/* Modified state */
+.modified {
+    background-color: #EDDFE0 !important;
+}
+
+/* Close button */
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: #705C53;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 10001;
+}
+
+.close-button:hover {
+    color: #B7B7B7;
+}
+
+/* Container */
+.container {
+    background: #F5F5F7;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+/* Overlay */
+.editor-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(112, 92, 83, 0.8);
+    z-index: 9999;
+}
+
+/* CGPA Display */
+.cgpa-final {
+    background: #705C53;
+    color: #F5F5F7;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-top: 2rem;
+}
+
+.cgpa-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 0;
+    font-size: 1.1rem;
+}
+
+.cgpa-main {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #EDDFE0;
+}
+
+/* Input styles */
+.course-input {
+    padding: 8px;
+    border: 1px solid #B7B7B7;
+    border-radius: 4px;
+    background: #F5F5F7;
+    color: #705C53;
+    width: 100%;
+}
+
+.course-input:focus {
+    outline: none;
+    border-color: #705C53;
+}
+
+/* Hover effects */
+tr:hover {
+    background-color: #EDDFE0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .stats-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .stat-item {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.new-semester .semester-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.action-cell {
+    text-align: center;
+}
+
+/* Remove the h2 styles since we're not using it anymore */
+.header h2 {
+    display: none;
+}
